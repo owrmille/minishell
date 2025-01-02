@@ -1,0 +1,9 @@
+.idea/
+.DS_Store
+.vscode/
+draft_expander.c
+minishell.dSYM/
+src/dollar_expander copy 2.c
+src/dollar_expander_copy.c
+trash/
+minishell_tester/
