@@ -30,14 +30,15 @@ Minishell supports the following features:
    - `>>` appends output to a file.  
 
 5. **Pipes**  
-   - Implements pipelines where the output of one command is passed as input to the next using the `|` operator.  
+   - Implements pipelines where the output of one command is passed as input to the next using the `|` operator.
+   - Handles pipes in the end of the command line (e.g. `ls |`).
 
 6. **Environment Variables**  
    - Supports expansion of environment variables using `$` syntax.  
    - Expands `$?` to the exit status of the most recently executed foreground command.  
 
 7. **Shell Variables**
-  - Supports expansion of shell variables using `$` syntax.  
+   - Supports expansion of shell variables using `$` syntax.  
 
 9. **Signal Handling**  
    - Handles `Ctrl-C`, `Ctrl-D`, and `Ctrl-\` like Bash:  
@@ -56,7 +57,8 @@ Minishell supports the following features:
 
 11. **Quoting**  
    - Handles single quotes (`'`) to disable interpretation of meta-characters.  
-   - Handles double quotes (`"`) to partially disable interpretation of meta-characters, except for `$`.  
+   - Handles double quotes (`"`) to partially disable interpretation of meta-characters, except for `$`.
+   - Handles unclosed quotes of both types.
 
 --------------
 ## Getting Started
